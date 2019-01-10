@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image=" bg" translatesAutoresizingMaskIntoConstraints="NO" id="Y7d-yd-4Rf">
+                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="TiQ-sb-Nsc"/>
+                                    <constraint firstAttribute="height" constant="647" id="aeM-th-qiS"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="lIi-Go-ZpQ">
+                                <rect key="frame" x="102.66666666666669" y="48" width="209" height="151"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHh-cv-Ydz">
+                                        <rect key="frame" x="0.0" y="0.0" width="209" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="ePJ-DI-K4i"/>
+                                            <constraint firstAttribute="width" constant="209" id="iUA-af-nEY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GujaratiSangamMN-Bold" family="Gujarati Sangam MN" pointSize="30"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Eg. London, New York" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MdW-TT-jzD">
+                                        <rect key="frame" x="4.6666666666666714" y="65" width="200" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="jgS-yz-90O"/>
+                                            <constraint firstAttribute="height" constant="30" id="vxK-vf-tsp"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ass-df-Mwx">
+                                        <rect key="frame" x="74.666666666666657" y="118" width="60" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="5su-u6-SQZ"/>
+                                            <constraint firstAttribute="height" constant="33" id="BPh-zH-nhP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="15"/>
+                                        <state key="normal" title="Submit"/>
+                                        <connections>
+                                            <action selector="BtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ko1-12-1lI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uty-em-M6S">
+                                <rect key="frame" x="83" y="225" width="248" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="fmE-UN-0FY"/>
+                                    <constraint firstAttribute="width" constant="209" id="yl4-4n-03a"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Uty-em-M6S" secondAttribute="trailing" constant="83" id="P9f-K0-Gnd"/>
+                            <constraint firstItem="Uty-em-M6S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VqP-qs-hLC"/>
+                            <constraint firstItem="Y7d-yd-4Rf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Weg-0C-4X6"/>
+                            <constraint firstItem="lIi-Go-ZpQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XEG-Cg-zck"/>
+                            <constraint firstItem="Uty-em-M6S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="83" id="fOd-mo-Sbc"/>
+                            <constraint firstItem="Y7d-yd-4Rf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="g0A-xK-sUA"/>
+                            <constraint firstItem="Y7d-yd-4Rf" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="kEU-3w-6yv"/>
+                            <constraint firstItem="Uty-em-M6S" firstAttribute="top" secondItem="lIi-Go-ZpQ" secondAttribute="bottom" constant="26" id="oDo-1u-eof"/>
+                            <constraint firstItem="Y7d-yd-4Rf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zEj-rg-pY6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="inputText" destination="MdW-TT-jzD" id="qnL-kj-m2O"/>
+                        <outlet property="resultText" destination="Uty-em-M6S" id="Tc7-bg-wjw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name=" bg" width="3122" height="4995"/>
+    </resources>
+</document>
