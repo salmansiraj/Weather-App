@@ -15,15 +15,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image=" bg" translatesAutoresizingMaskIntoConstraints="NO" id="Y7d-yd-4Rf">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image=" bg" translatesAutoresizingMaskIntoConstraints="NO" id="Y7d-yd-4Rf" userLabel="bg">
                                 <rect key="frame" x="0.0" y="20" width="414" height="716"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="375" id="TiQ-sb-Nsc"/>
-                                    <constraint firstAttribute="height" constant="647" id="aeM-th-qiS"/>
-                                </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="lIi-Go-ZpQ">
                                 <rect key="frame" x="102.66666666666669" y="48" width="209" height="151"/>
@@ -75,14 +71,18 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Y7d-yd-4Rf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="607-Rx-dRd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Uty-em-M6S" secondAttribute="trailing" constant="83" id="P9f-K0-Gnd"/>
+                            <constraint firstItem="Y7d-yd-4Rf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="R2F-BE-Whf"/>
                             <constraint firstItem="Uty-em-M6S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VqP-qs-hLC"/>
                             <constraint firstItem="Y7d-yd-4Rf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Weg-0C-4X6"/>
                             <constraint firstItem="lIi-Go-ZpQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XEG-Cg-zck"/>
                             <constraint firstItem="Uty-em-M6S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="83" id="fOd-mo-Sbc"/>
+                            <constraint firstItem="Y7d-yd-4Rf" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="fap-hq-Kvc"/>
                             <constraint firstItem="Y7d-yd-4Rf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="g0A-xK-sUA"/>
                             <constraint firstItem="Y7d-yd-4Rf" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="kEU-3w-6yv"/>
                             <constraint firstItem="Uty-em-M6S" firstAttribute="top" secondItem="lIi-Go-ZpQ" secondAttribute="bottom" constant="26" id="oDo-1u-eof"/>
+                            <constraint firstAttribute="trailing" secondItem="Y7d-yd-4Rf" secondAttribute="trailing" id="uYm-SN-Rcs"/>
                             <constraint firstItem="Y7d-yd-4Rf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zEj-rg-pY6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -94,7 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
+            <point key="canvasLocation" x="133.33333333333334" y="132.88043478260872"/>
         </scene>
     </scenes>
     <resources>

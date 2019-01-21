@@ -15,49 +15,35 @@ class ViewController: UIViewController {
     @IBOutlet weak var resultText: UILabel!
     
     @IBAction func BtnPressed(_ sender: Any) {
-        let url = URL(string: "https://weather.com/weather/today/l/US" + inputText.text! + "0996:1:US")!
+        let url = URL(string: "https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=3c86987d6b1400cb3782c054e1949718")
         
-        let request = NSMutableURLRequest(url: url)
-        
-        let task = URLSession.shared.dataTask(with: request as URLRequest) {
-            data, response, error in
-            
-            var message = ""
-            
+        let task = URLSession.shared.dataTask(with: url!) {
+            (data, response, error) in
             if error != nil {
-                print(error!)
+                print("error")
             }
             else {
-                if let unwrapData = data {
-                    // Create NSString
-                    let dataString = NSString(data: unwrapData, encoding: String.Encoding.utf8.rawValue)
+                if let urlContent = data {
                     
-                    var stringSeperator = "<div class=\"today_nowcard-temp\"><span class="
-                    
-                    if let contentArray = dataString?.components(separatedBy: stringSeperator) {
+                    do {
+                        let jsonResult = try JSONSerialization.jsonObject(with: urlContent, options: JSONSerialization.ReadingOptions.mutableContainers)
                         
-                        if contentArray.count > 0 {
-                            
-                            stringSeperator = "<sup>°</sup></span></div><div class=\"today_"
-                            let newContentArray = contentArray[1].components(separatedBy: stringSeperator)
-                            
-                            if newContentArray.count > 0 {
+                        print(jsonResult)
+                        
+                        if let description = jsonResult["weather"]??[0]["description"] as? String {
+                            DispatchQueue.main.sync(execute: {
                                 
-                                message = newContentArray[0]
-                                message = "Weather Forecast: " + newContentArray[0].suffix(2) + " Degrees"
-//                                print(message)
-                            }
+                                self.resultText = description
+                                
+                            })
                         }
                         
+                    } catch {
+                        print("JSON Processing failed")
                     }
                     
                 }
-                
             }
-//            print(message)
-            DispatchQueue.main.sync(execute: {
-                self.resultText.text = message
-            })
         }
         task.resume()
     }
