@@ -1,5 +1,5 @@
 # Weather-App
-A simple, weather app in Swift.
+A simplistic, weather app in Swift.
 
 ## Current
 * Used OpenWeatherMap api to access real time weather information
